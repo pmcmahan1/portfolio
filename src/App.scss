@@ -5,67 +5,64 @@ $secondary-button: #f7f8e3;
 
 //Control darkmode colors here
 .dark {
-  color: $background !important;
   background-color: #121212 !important;
-
+  color: $background !important;
 }
 
 .app {
-  color: $text;
   background-color: $background;
+  color: $text;
   display: flex;
   position: relative;
 
   //Sidebar css
   .sidebar {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    position: fixed;
-    width: 20%;
     background-color: #01020e;
     color: #ffffff;
+    display: flex;
+    flex-direction: column;
     gap: 1em;
+    height: 100%;
     justify-content: space-between;
+    position: fixed;
+    width: 20%;
 
-    .link{
-        cursor: pointer;
-        gap: 5px;
-    }
-
-    .email{
-        margin-bottom: -10px;
-        margin-top: 20px;
-    }
-
-    // Lots of waste rewriting code here, but it's simple and readable enough as it is.
-    .sidebar-group-top {
+    .sidebar-group {
+      align-items: center;
       display: flex;
       flex-direction: column;
-      gap: 1em;
-      align-items: center;
-      margin-top: 3em;
-      font-size: 20px;
-    }
-    .sidebar-group-middle {
-        display: flex;
-        flex-direction: column;
-        gap: 2em;
-        align-items: center;
-        font-size: 22px;
-      }
-    .sidebar-group-bottom {
-      display: flex;
-      flex-direction: column;
-      gap: 1em;
-      align-items: center;
-      margin-bottom: 3em;
-      font-size: 16px;
     }
 
     .sidebar-item {
-      display: flex;
       align-items: center;
+      display: flex;
+    }
+
+    .top {
+      font-size: 20px;
+      gap: 1em;
+      margin-top: 3em;
+    }
+
+    .middle {
+      font-size: 22px;
+      gap: 2em;
+    }
+
+    .bottom {
+      font-size: 16px;
+      gap: 1em;
+      margin-bottom: 3em;
+    }
+
+    .link {
+      cursor: pointer;
+      gap: 5px;
+    }
+
+    .email {
+      margin-bottom: -10px;
+      margin-top: 20px;
     }
   }
 
@@ -73,16 +70,15 @@ $secondary-button: #f7f8e3;
   .page {
     display: flex;
     flex-direction: column;
-    position: relative;
     margin-left: 20%;
+    position: relative;
     width: 100%;
-
+    
     .content {
       height: 100vh;
     }
   }
 }
-
 
 // Random css and media screen
 
@@ -97,5 +93,5 @@ $secondary-button: #f7f8e3;
 }
 
 .MuiSwitch-track {
-    background-color: rgb(119, 119, 119) !important;
+  background-color: rgb(119, 119, 119) !important;
 }

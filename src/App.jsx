@@ -24,7 +24,7 @@ function App() {
   return (
     <div className={`app ${isDarkMode ? "dark" : ""}`}>
       <div className="sidebar">
-        <div className="sidebar-group-top">
+        <div className="sidebar-group top">
           <div className="sidebar-item">Patrick's Portfolio</div>
           <div className="sidebar-item">
             <LightModeIcon />
@@ -32,13 +32,13 @@ function App() {
             <DarkModeIcon />
           </div>
         </div>
-        <div className="sidebar-group-middle">
+        <div className="sidebar-group middle">
           <div className="sidebar-item link">Top</div>
           <div className="sidebar-item link">About</div>
           <div className="sidebar-item link">Projects</div>
           <div className="sidebar-item link">Contact</div>
         </div>
-        <div className="sidebar-group-bottom">
+        <div className="sidebar-group bottom">
           <div className="sidebar-item link">
             <ContactPageIcon />
             Resume
