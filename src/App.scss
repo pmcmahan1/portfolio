@@ -3,6 +3,7 @@ $background: #ffffff;
 $primary-button: #27258d;
 $secondary-button: #f7f8e3;
 
+//Control darkmode colors here
 .dark {
   color: $background !important;
   background-color: #121212 !important;
@@ -15,6 +16,7 @@ $secondary-button: #f7f8e3;
   display: flex;
   position: relative;
 
+  //Sidebar css
   .sidebar {
     display: flex;
     flex-direction: column;
@@ -36,6 +38,7 @@ $secondary-button: #f7f8e3;
         margin-top: 20px;
     }
 
+    // Lots of waste rewriting code here, but it's simple and readable enough as it is.
     .sidebar-group-top {
       display: flex;
       flex-direction: column;
@@ -66,6 +69,7 @@ $secondary-button: #f7f8e3;
     }
   }
 
+  // End of sidebar, page css
   .page {
     display: flex;
     flex-direction: column;
@@ -78,6 +82,9 @@ $secondary-button: #f7f8e3;
     }
   }
 }
+
+
+// Random css and media screen
 
 @media screen and (max-width: 1024px) {
   .sidebar {
