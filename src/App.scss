@@ -1,3 +1,75 @@
+$text: #181806;
+$background: #ffffff;
+$primary-button: #27258d;
+$secondary-button: #f7f8e3;
+
+.dark {
+  color: $background !important;
+  background-color: #121212 !important;
+}
+
 .app {
-  
+  color: $text;
+  background-color: $background;
+  display: flex;
+  position: relative;
+
+  .sidebar {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: fixed;
+    width: 20%;
+    background-color: #01020e;
+    color: #ffffff;
+    gap: 1em;
+    justify-content: space-between;
+
+    .sidebar-group-top {
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+      align-items: center;
+      margin-top: 3em;
+    }
+    .sidebar-group-middle {
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+        align-items: center;
+      }
+    .sidebar-group-bottom {
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+      align-items: center;
+      margin-bottom: 3em;
+    }
+
+    .sidebar-item {
+      display: flex;
+    }
+  }
+
+  .page {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-left: 20%;
+    width: 100%;
+
+    .content {
+      height: 100vh;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .sidebar {
+    display: none !important;
+  }
+
+  .page {
+    margin-left: 0 !important;
+  }
 }
