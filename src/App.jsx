@@ -15,8 +15,9 @@ import "./App.scss";
 // MUI is one of my favorite components, so I work with it often.
 
 function App() {
-  const [isDarkMode, setIsDarkmode] = useState(false);
 
+  const [isDarkMode, setIsDarkmode] = useState(false);
+  
   const handleDarkMode = () => {
     setIsDarkmode((prev) => !prev);
   };
