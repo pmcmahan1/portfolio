@@ -1,5 +1,5 @@
 $text: #181806;
-$background: #ffffff;
+$background: #f5f4f1;
 $primary-button: #27258d;
 $secondary-button: #f7f8e3;
 
@@ -7,6 +7,12 @@ $secondary-button: #f7f8e3;
 .dark {
   background-color: #121212 !important;
   color: $background !important;
+
+  .sidebar{
+    background-color: #1b1b1b !important;
+    color: #ffffff !important;
+  }
+
 }
 
 .app {
@@ -17,8 +23,8 @@ $secondary-button: #f7f8e3;
 
   //Sidebar css
   .sidebar {
-    background-color: #01020e;
-    color: #ffffff;
+    background-color: #ffffff;
+    color: $text;
     display: flex;
     flex-direction: column;
     gap: 1em;
@@ -73,7 +79,7 @@ $secondary-button: #f7f8e3;
     margin-left: 20%;
     position: relative;
     width: 100%;
-    
+
     .content {
       height: 100vh;
     }

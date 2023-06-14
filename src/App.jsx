@@ -27,9 +27,9 @@ function App() {
         <div className="sidebar-group top">
           <div className="sidebar-item">Patrick's Portfolio</div>
           <div className="sidebar-item">
-            <LightModeIcon />
+            <LightModeIcon className="icon" />
             <Switch onClick={handleDarkMode} />
-            <DarkModeIcon />
+            <DarkModeIcon className="icon" />
           </div>
         </div>
         <div className="sidebar-group middle">
@@ -44,15 +44,15 @@ function App() {
             Resume
           </div>
           <div className="sidebar-item link">
-            <LinkedInIcon />
+            <LinkedInIcon className="icon" />
             LinkedIn
           </div>
           <div className="sidebar-item link">
-            <GitHubIcon />
+            <GitHubIcon className="icon" />
             GitHub
           </div>
           <div className="sidebar-item email">
-            <EmailIcon />
+            <EmailIcon className="icon" />
           </div>
           <div className="sidebar-item">mcmahanconner@gmail.com</div>
         </div>
