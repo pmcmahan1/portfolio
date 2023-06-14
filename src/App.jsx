@@ -1,4 +1,7 @@
 import React, { useState } from 'react'
+import Switch from '@mui/material/Switch';
+import LightModeIcon from '@mui/icons-material/LightMode';
+import DarkModeIcon from '@mui/icons-material/DarkMode';
 import './App.scss'
 
 
@@ -6,12 +9,20 @@ function App() {
 
  const [isDarkMode, setIsDarkmode] = useState(false)
 
+ const handleDarkMode = () => {
+  setIsDarkmode(prev => !prev)
+ }
+
   return (
 <div className={`app ${isDarkMode ? "dark" : ""}`}>
   <div className="sidebar">
     <div className="sidebar-group-top">
     <div className="sidebar-item">Patrick's Portfolio</div>
-    <div className="sidebar-item">Slider for darkmode</div>
+    <div className="sidebar-item">
+      <LightModeIcon />
+      <Switch onClick={handleDarkMode}/>
+      <DarkModeIcon />
+      </div>
      </div>   
      <div className="sidebar-group-middle">
     <div className="sidebar-item">Top</div>

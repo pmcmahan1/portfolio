@@ -6,6 +6,7 @@ $secondary-button: #f7f8e3;
 .dark {
   color: $background !important;
   background-color: #121212 !important;
+
 }
 
 .app {
@@ -31,12 +32,14 @@ $secondary-button: #f7f8e3;
       gap: 1em;
       align-items: center;
       margin-top: 3em;
+      font-size: 18px;
     }
     .sidebar-group-middle {
         display: flex;
         flex-direction: column;
         gap: 2em;
         align-items: center;
+        font-size: 22px;
       }
     .sidebar-group-bottom {
       display: flex;
@@ -44,10 +47,12 @@ $secondary-button: #f7f8e3;
       gap: 1em;
       align-items: center;
       margin-bottom: 3em;
+      font-size: 16px;
     }
 
     .sidebar-item {
       display: flex;
+      align-items: center;
     }
   }
 
@@ -72,4 +77,8 @@ $secondary-button: #f7f8e3;
   .page {
     margin-left: 0 !important;
   }
+}
+
+.MuiSwitch-track {
+    background-color: rgb(119, 119, 119) !important;
 }
