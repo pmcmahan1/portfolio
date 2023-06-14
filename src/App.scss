@@ -26,13 +26,23 @@ $secondary-button: #f7f8e3;
     gap: 1em;
     justify-content: space-between;
 
+    .link{
+        cursor: pointer;
+        gap: 5px;
+    }
+
+    .email{
+        margin-bottom: -10px;
+        margin-top: 20px;
+    }
+
     .sidebar-group-top {
       display: flex;
       flex-direction: column;
       gap: 1em;
       align-items: center;
       margin-top: 3em;
-      font-size: 18px;
+      font-size: 20px;
     }
     .sidebar-group-middle {
         display: flex;

@@ -2,6 +2,10 @@ import React, { useState } from 'react'
 import Switch from '@mui/material/Switch';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import ContactPageIcon from '@mui/icons-material/ContactPage';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import EmailIcon from '@mui/icons-material/Email';
 import './App.scss'
 
 
@@ -25,16 +29,16 @@ function App() {
       </div>
      </div>   
      <div className="sidebar-group-middle">
-    <div className="sidebar-item">Top</div>
-    <div className="sidebar-item">About</div>
-    <div className="sidebar-item">Projects</div>
-    <div className="sidebar-item">Contact</div>
+    <div className="sidebar-item link">Top</div>
+    <div className="sidebar-item link">About</div>
+    <div className="sidebar-item link">Projects</div>
+    <div className="sidebar-item link">Contact</div>
     </div>
     <div className="sidebar-group-bottom">
-    <div className="sidebar-item">My Resume</div>
-    <div className="sidebar-item">My LinkedIn</div>
-    <div className="sidebar-item">My GitHub</div>
-    <div className="sidebar-item">Email:</div>
+    <div className="sidebar-item link"><ContactPageIcon />Resume</div>
+    <div className="sidebar-item link"><LinkedInIcon />LinkedIn</div>
+    <div className="sidebar-item link"><GitHubIcon />GitHub</div>
+    <div className="sidebar-item email"><EmailIcon /></div>
     <div className="sidebar-item">mcmahanconner@gmail.com</div>
     </div>
   </div>
