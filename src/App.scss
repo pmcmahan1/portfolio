@@ -1,6 +1,6 @@
 $text: #181806;
 $background: #f5f4f1;
-$primary-button: #27258d;
+$primary-button: #0d6efd;
 $secondary-button: #f7f8e3;
 
 //Control darkmode colors here
@@ -8,11 +8,19 @@ $secondary-button: #f7f8e3;
   background-color: #121212 !important;
   color: $background !important;
 
-  .sidebar{
+  .sidebar {
     background-color: #1b1b1b !important;
     color: #ffffff !important;
   }
 
+  .card,
+  .featured-container {
+    background-color: #1b1b1b !important;
+    border: 1px solid rgb(104, 102, 102) !important;
+  }
+  .secondary{
+    background-color: #121212 !important;
+  }
 }
 
 .app {
@@ -20,6 +28,23 @@ $secondary-button: #f7f8e3;
   color: $text;
   display: flex;
   position: relative;
+
+
+  .media-warning {
+    display: none;
+    text-align: center;
+    background-color: #7573732a;
+    font-size: 18px;
+    align-items: center;
+    padding-top: 5px;
+
+    .media-switch {
+      margin-top: 2px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
 
   //Sidebar css
   .sidebar {
@@ -81,7 +106,144 @@ $secondary-button: #f7f8e3;
     width: 100%;
 
     .content {
-      height: 100vh;
+      min-height: 100vh;
+    }
+
+    .intro {
+      .intro-headtext {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        margin-top: 1em;
+        font-size: 74px;
+        gap: 0.5em;
+      }
+
+      .intro-bodytext {
+        text-align: center;
+        font-size: 30px;
+        margin: 2em 5em 0em 5em;
+      }
+
+      .avatar {
+        height: 350px;
+        width: 350px;
+        border: 2px solid #ffffff;
+        border-radius: 50%;
+      }
+    }
+
+    .about{
+      .about-headtext{
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        font-size: 74px;
+      }
+      .about-bodytext{
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        text-align: justify;
+        font-size: 30px;
+        padding: 2em 4em 0 4em;
+      }
+      .about-skills{
+        display: flex;
+        justify-content: center;
+        margin-top: 2em;
+        gap: 2em;
+
+        .skill-logo {
+          cursor: default !important;
+          color: $primary-button !important;
+        }
+      }
+    }
+    
+    .featured-header{
+      text-align: center;
+      font-size: 44px;
+      margin-top: 1em;
+    }
+    .projects{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      .projects-headtext{
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        font-size: 74px;
+      }
+      .projects-featured{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .featured-container{
+          margin-top: 1em;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          border: 2px solid lightgray;
+          max-width: 800px;
+          padding: 1em;
+          border-radius: 5px;
+          background-color: white;
+          justify-content: space-between;
+          gap: 1em;
+          text-align: center;
+        }
+        .featured-title{
+          font-size: 32px;
+        }
+        .featured-desc{
+          font-size: 20px;
+          max-width: 800px;
+          text-align: justify;
+          padding: 1em;
+        }
+        .featured-img{
+          max-height: 500px;
+          max-width: 500px;
+
+          img{
+            max-height: 100%;
+            max-width: 100%;
+            border-radius: 10px;
+            
+          }
+        }
+        .featured-buttons{
+          display: flex;
+          gap: 4em;
+          button {
+            padding: 1em;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-image: linear-gradient(rgb(0 0 0/40%) 0 0);
+          }
+    
+        .primary{
+            background-color: #0d6efd;
+        }
+        .secondary{
+            background-color: rgb(134, 133, 133);
+        }
+        }
+      }
+      .projects-list{
+        display: flex;
+        justify-content: center;
+        gap: 2em;
+        flex-wrap: wrap;
+        margin: 4em 4em 0 4em;
+      }
     }
   }
 }
@@ -89,6 +251,10 @@ $secondary-button: #f7f8e3;
 // Random css and media screen
 
 @media screen and (max-width: 1024px) {
+  .media-warning {
+    display: block !important;
+  }
+
   .sidebar {
     display: none !important;
   }
@@ -96,7 +262,48 @@ $secondary-button: #f7f8e3;
   .page {
     margin-left: 0 !important;
   }
+
+  .content{
+    min-height: 120vh !important;
+  }
+
+  .intro {
+    .intro-headtext {
+      flex-direction: column-reverse;
+      text-align: center;
+      padding: 0em 1em 0em 1em;
+      margin-top: 1em !important;
+      font-size: 44px !important;
+    }
+
+    .intro-bodytext {
+      margin: 1em !important;
+      font-size: 26px !important;
+    }
+  }
+  .about {
+    .about-headtext{
+      font-size: 56px !important;
+    }
+    .about-bodytext{
+      font-size: 22px !important;
+      padding: 1em 2em 0 2em !important;
+    }
+    .about-skills{
+      gap: 0.5em !important;
+      flex-direction: column;
+    }
+  }
+  .projects{
+    .projects-headtext{
+      font-size: 56px !important;
+    }
+    .projects-list{
+
+    }
+  }
 }
+
 
 .MuiSwitch-track {
   background-color: rgb(119, 119, 119) !important;
