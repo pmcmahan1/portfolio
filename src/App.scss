@@ -18,8 +18,14 @@ $secondary-button: #f7f8e3;
     background-color: #1b1b1b !important;
     border: 1px solid rgb(104, 102, 102) !important;
   }
-  .secondary{
+  .secondary {
     background-color: #121212 !important;
+  }
+
+  .contact-form {
+    background-color: #1b1b1b !important;
+    color: white !important;
+    border-color: rgb(104, 102, 102) !important;
   }
 }
 
@@ -28,7 +34,6 @@ $secondary-button: #f7f8e3;
   color: $text;
   display: flex;
   position: relative;
-
 
   .media-warning {
     display: none;
@@ -44,6 +49,11 @@ $secondary-button: #f7f8e3;
       justify-content: center;
       align-items: center;
     }
+  }
+
+  a{
+    text-decoration: none;
+    color: inherit;
   }
 
   //Sidebar css
@@ -126,21 +136,21 @@ $secondary-button: #f7f8e3;
       }
 
       .avatar {
-        height: 350px;
-        width: 350px;
+        height: 400px;
+        width: 400px;
         border: 2px solid #ffffff;
         border-radius: 50%;
       }
     }
 
-    .about{
-      .about-headtext{
+    .about {
+      .about-headtext {
         align-items: center;
         display: flex;
         justify-content: center;
         font-size: 74px;
       }
-      .about-bodytext{
+      .about-bodytext {
         align-items: center;
         display: flex;
         justify-content: center;
@@ -148,7 +158,7 @@ $secondary-button: #f7f8e3;
         font-size: 30px;
         padding: 2em 4em 0 4em;
       }
-      .about-skills{
+      .about-skills {
         display: flex;
         justify-content: center;
         margin-top: 2em;
@@ -160,28 +170,31 @@ $secondary-button: #f7f8e3;
         }
       }
     }
-    
-    .featured-header{
+
+    .featured-header {
       text-align: center;
       font-size: 44px;
       margin-top: 1em;
     }
-    .projects{
+    .for-contact {
+      margin-top: 4em;
+    }
+    .projects {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      .projects-headtext{
+      .projects-headtext {
         align-items: center;
         display: flex;
         justify-content: center;
         font-size: 74px;
       }
-      .projects-featured{
+      .projects-featured {
         display: flex;
         flex-direction: column;
         align-items: center;
 
-        .featured-container{
+        .featured-container {
           margin-top: 1em;
           display: flex;
           flex-direction: column;
@@ -195,27 +208,26 @@ $secondary-button: #f7f8e3;
           gap: 1em;
           text-align: center;
         }
-        .featured-title{
+        .featured-title {
           font-size: 32px;
         }
-        .featured-desc{
+        .featured-desc {
           font-size: 20px;
           max-width: 800px;
           text-align: justify;
           padding: 1em;
         }
-        .featured-img{
+        .featured-img {
           max-height: 500px;
           max-width: 500px;
 
-          img{
+          img {
             max-height: 100%;
             max-width: 100%;
             border-radius: 10px;
-            
           }
         }
-        .featured-buttons{
+        .featured-buttons {
           display: flex;
           gap: 4em;
           button {
@@ -224,26 +236,105 @@ $secondary-button: #f7f8e3;
             border: none;
             border-radius: 8px;
             cursor: pointer;
-        }
-        button:hover {
+          }
+          button:hover {
             background-image: linear-gradient(rgb(0 0 0/40%) 0 0);
           }
-    
-        .primary{
+
+          .primary {
             background-color: #0d6efd;
-        }
-        .secondary{
+          }
+          .secondary {
             background-color: rgb(134, 133, 133);
-        }
+          }
         }
       }
-      .projects-list{
+      .projects-list {
         display: flex;
         justify-content: center;
         gap: 2em;
         flex-wrap: wrap;
         margin: 4em 4em 0 4em;
       }
+    }
+
+    .contact-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 1em;
+      min-height: 60vh !important;
+    }
+
+    .contact {
+      display: flex;
+      justify-content: center;
+      max-width: 800px;
+      gap: 2em;
+    }
+    .contact-head-text {
+      display: flex;
+      justify-content: center;
+      font-size: 4rem;
+      font-weight: 600;
+      margin-bottom: 2rem;
+      padding-top: 160px;
+    }
+
+    .contact-text {
+      display: flex;
+      flex-direction: column;
+      max-width: 400px;
+      gap: 2em;
+      margin-top: 2em;
+    }
+
+    .contact-text-head {
+      font-size: 34px;
+    }
+
+    .contact-text-body {
+      font-size: 24px;
+    }
+    .contact-form {
+      color: black;
+      font-weight: 500;
+      font-size: 18px;
+      border-radius: 5px;
+      line-height: 22px;
+      background-color: white;
+      border: 2px solid #dee2e6;
+      transition: all 0.3s;
+      width: 100%;
+      box-sizing: border-box;
+      outline: 0;
+    }
+
+    .contact-form:focus {
+      border: 2px solid #0d6efd;
+    }
+
+    textarea {
+      height: 150px;
+      line-height: 150%;
+      resize: vertical;
+    }
+
+    [type="submit"] {
+      width: 100%;
+      background: #0d6efd;
+      border-radius: 5px;
+      border: 0;
+      cursor: pointer;
+      color: white;
+      font-size: 24px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      transition: all 0.3s;
+      margin-top: 10px;
+      font-weight: 700;
+    }
+    [type="submit"]:hover {
+      background: #0a58ca;
     }
   }
 }
@@ -263,7 +354,7 @@ $secondary-button: #f7f8e3;
     margin-left: 0 !important;
   }
 
-  .content{
+  .content {
     min-height: 120vh !important;
   }
 
@@ -282,28 +373,29 @@ $secondary-button: #f7f8e3;
     }
   }
   .about {
-    .about-headtext{
+    .about-headtext {
       font-size: 56px !important;
     }
-    .about-bodytext{
+    .about-bodytext {
       font-size: 22px !important;
       padding: 1em 2em 0 2em !important;
     }
-    .about-skills{
+    .about-skills {
       gap: 0.5em !important;
       flex-direction: column;
     }
   }
-  .projects{
-    .projects-headtext{
+  .projects {
+    .projects-headtext {
       font-size: 56px !important;
     }
-    .projects-list{
-
+    .projects-list {
     }
   }
+  .contact-container {
+    padding: 1em !important;
+  }
 }
-
 
 .MuiSwitch-track {
   background-color: rgb(119, 119, 119) !important;

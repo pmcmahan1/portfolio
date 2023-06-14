@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import Switch from "@mui/material/Switch";
 import { Tooltip, IconButton } from "@mui/material";
+import { ContactUs } from "./Contact";
+import { ToastContainer, toast } from "react-toastify";
+import { Link, animateScroll as scroll } from "react-scroll";
+import "react-toastify/dist/ReactToastify.css";
 import LightModeIcon from "@mui/icons-material/LightMode";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
@@ -16,7 +20,7 @@ import {
 } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io5";
 import avatar from "./avatar.jpg";
-import preview from "./preview.jpg"
+import preview from "./preview.jpg";
 import data from "./data";
 import Card from "./Card";
 import "./App.scss";
@@ -32,6 +36,7 @@ function App() {
   });
 
   const [isDarkMode, setIsDarkmode] = useState(false);
+  const notify = () => toast("Message sent!");
 
   const handleDarkMode = () => {
     setIsDarkmode((prev) => !prev);
@@ -49,24 +54,42 @@ function App() {
           </div>
         </div>
         <div className="sidebar-group middle">
-          <div className="sidebar-item link">Top</div>
-          <div className="sidebar-item link">About</div>
-          <div className="sidebar-item link">Projects</div>
-          <div className="sidebar-item link">Contact</div>
+          <div className="sidebar-item link" onClick={() => scroll.scrollToTop()}>Top</div>
+          <Link to="about" smooth={true}><div className="sidebar-item link">About</div></Link>
+          <Link to="projects" smooth={true}><div className="sidebar-item link">Projects</div></Link>
+          <div className="sidebar-item link" onClick={() => scroll.scrollToBottom()}>Contact</div>
         </div>
         <div className="sidebar-group bottom">
-          <div className="sidebar-item link">
-            <ContactPageIcon />
-            Resume
-          </div>
-          <div className="sidebar-item link">
-            <LinkedInIcon className="icon" />
-            LinkedIn
-          </div>
-          <div className="sidebar-item link">
-            <GitHubIcon className="icon" />
-            GitHub
-          </div>
+          <a
+            href="https://peach-janella-35.tiiny.site/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div className="sidebar-item link">
+              <ContactPageIcon />
+              Resume
+            </div>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/patrick-mcmahan-736a42234/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div className="sidebar-item link">
+              <LinkedInIcon className="icon" />
+              LinkedIn
+            </div>
+          </a>
+          <a
+            href="https://github.com/pmcmahan1"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div className="sidebar-item link">
+              <GitHubIcon className="icon" />
+              GitHub
+            </div>
+          </a>
           <div className="sidebar-item email">
             <EmailIcon className="icon" />
           </div>
@@ -106,7 +129,7 @@ function App() {
           </div>
         </div>
         <div className="content">
-          <div className="about">
+          <div className="about" id="about">
             <div className="about-headtext">About Me</div>
             <div className="about-bodytext">
               Since I was a child I have enjoyed creating things on the
@@ -202,31 +225,39 @@ function App() {
           </div>
         </div>
         <div className="content">
-          <div className="projects">
+          <div className="projects" id="projects">
             <div className="projects-headtext">My Projects</div>
             <div className="projects-featured">
               <div className="featured-header">Featured Project</div>
               <div className="featured-container">
-              <div className="featured-title">Project Zomboid Builder</div>
-              <div className="featured-desc">
-                This React application was inspired by the game Project Zomboid.
-                You can select different occupations and positive or negative
-                traits that will impact your character's starting statistics.
-                This project was incredibly fun for me and has some pretty
-                intricate React/Javascript functionality. I learned alot about
-                custom components, conditional renders, and properly tracking
-                and modifying state variables.
-              </div>
-              <div className="featured-img">
-                <img src={preview} alt="" />
-              </div>
-              <div className="featured-buttons">
-                <a href="https://pmcmahan1.github.io/pz-builder/" target="_blank" rel="noopener noreferrer">
-                  <button className="primary">View Site</button>
-                </a>
-                <a href="https://github.com/pmcmahan1/pz-builder" target="_blank" rel="noopener noreferrer">
-                  <button className="secondary">Source Code</button>
-                </a>
+                <div className="featured-title">Project Zomboid Builder</div>
+                <div className="featured-desc">
+                  This React application was inspired by the game Project
+                  Zomboid. You can select different occupations and positive or
+                  negative traits that will impact your character's starting
+                  statistics. This project was incredibly fun for me and has
+                  some pretty intricate React/Javascript functionality. I
+                  learned alot about custom components, conditional renders, and
+                  properly tracking and modifying state variables.
+                </div>
+                <div className="featured-img">
+                  <img src={preview} alt="" />
+                </div>
+                <div className="featured-buttons">
+                  <a
+                    href="https://pmcmahan1.github.io/pz-builder/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <button className="primary">View Site</button>
+                  </a>
+                  <a
+                    href="https://github.com/pmcmahan1/pz-builder"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <button className="secondary">Source Code</button>
+                  </a>
                 </div>
               </div>
             </div>
@@ -234,7 +265,32 @@ function App() {
             <div className="projects-list">{cards}</div>
           </div>
         </div>
-        <div className="content">hello, world</div>
+        <div className="featured-header for-contact">Contact</div>
+        <div className="content contact-container">
+          <div className="contact">
+            <ContactUs notify={notify} />
+            <div className="contact-text">
+              <div className="contact-text-head">Message me</div>
+              <div className="contact-text-body">
+                If you have any questions or would like to reach out to me,
+                please use the following form. I look forward to hearing from
+                you!
+              </div>
+            </div>
+          </div>
+          <ToastContainer
+            position="bottom-center"
+            autoClose={5000}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover={false}
+            theme="light"
+          />
+        </div>
       </div>
     </div>
   );
