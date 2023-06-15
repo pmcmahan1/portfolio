@@ -212,16 +212,6 @@ function App() {
                   <FaGitSquare size={50} />
                 </IconButton>
               </Tooltip>
-              <Tooltip
-                title="Node.js"
-                disableInteractive
-                disableRipple
-                className="skill-logo"
-              >
-                <IconButton>
-                  <FaNodeJs size={50} />
-                </IconButton>
-              </Tooltip>
             </div>
           </div>
         </div>

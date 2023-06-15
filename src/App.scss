@@ -3,6 +3,8 @@ $background: #f5f4f1;
 $primary-button: #0d6efd;
 $secondary-button: #f7f8e3;
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 //Control darkmode colors here
 .dark {
   background-color: #121212 !important;
@@ -34,6 +36,7 @@ $secondary-button: #f7f8e3;
   color: $text;
   display: flex;
   position: relative;
+  font-family: 'Roboto Slab', serif;
 
   .media-warning {
     display: none;
@@ -42,6 +45,7 @@ $secondary-button: #f7f8e3;
     font-size: 18px;
     align-items: center;
     padding-top: 5px;
+    margin-bottom: 5px;
 
     .media-switch {
       margin-top: 2px;
@@ -117,6 +121,7 @@ $secondary-button: #f7f8e3;
 
     .content {
       min-height: 100vh;
+      margin-top: 4em;
     }
 
     .intro {
@@ -124,9 +129,9 @@ $secondary-button: #f7f8e3;
         align-items: center;
         display: flex;
         justify-content: center;
-        margin-top: 1em;
         font-size: 74px;
         gap: 0.5em;
+        padding-left: 10px;
       }
 
       .intro-bodytext {
@@ -356,15 +361,26 @@ $secondary-button: #f7f8e3;
 
   .content {
     min-height: 120vh !important;
+    margin-top: 0 !important;
+  }
+
+  .avatar {
+    width: 300px !important;
+    height: 300px !important;
+  }
+
+  .contact-text{
+    margin-top: 1em !important;
+    gap: 1em !important;
   }
 
   .intro {
     .intro-headtext {
       flex-direction: column-reverse;
       text-align: center;
-      padding: 0em 1em 0em 1em;
-      margin-top: 1em !important;
+      padding: 0em 1em 0em 1em !important;
       font-size: 44px !important;
+      
     }
 
     .intro-bodytext {
