@@ -23,6 +23,7 @@ import avatar from "./avatar.jpg";
 import preview from "./preview.jpg";
 import data from "./data";
 import Card from "./Card";
+import Pdf from './Patrick McMahan Resume.pdf'
 import "./App.scss";
 
 // Hey there, thanks for checking out my code!
@@ -61,7 +62,7 @@ function App() {
         </div>
         <div className="sidebar-group bottom">
           <a
-            href="https://peach-janella-35.tiiny.site/"
+            href={Pdf}
             target="_blank"
             rel="noopener noreferrer"
           >
