@@ -16,14 +16,13 @@ import {
   FaCss3Alt,
   FaReact,
   FaGitSquare,
-  FaNodeJs,
 } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io5";
 import avatar from "./avatar.jpg";
 import preview from "./preview.jpg";
 import data from "./data";
 import Card from "./Card";
-import Pdf from './Patrick McMahan Resume.pdf'
+import Pdf from "./Patrick McMahan Resume.pdf";
 import "./App.scss";
 
 // Hey there, thanks for checking out my code!
@@ -55,17 +54,27 @@ function App() {
           </div>
         </div>
         <div className="sidebar-group middle">
-          <div className="sidebar-item link" onClick={() => scroll.scrollToTop()}>Top</div>
-          <Link to="about" smooth={true}><div className="sidebar-item link">About</div></Link>
-          <Link to="projects" smooth={true}><div className="sidebar-item link">Projects</div></Link>
-          <div className="sidebar-item link" onClick={() => scroll.scrollToBottom()}>Contact</div>
+          <div
+            className="sidebar-item link"
+            onClick={() => scroll.scrollToTop()}
+          >
+            Top
+          </div>
+          <Link to="about" smooth={true}>
+            <div className="sidebar-item link">About</div>
+          </Link>
+          <Link to="projects" smooth={true}>
+            <div className="sidebar-item link">Projects</div>
+          </Link>
+          <div
+            className="sidebar-item link"
+            onClick={() => scroll.scrollToBottom()}
+          >
+            Contact
+          </div>
         </div>
         <div className="sidebar-group bottom">
-          <a
-            href={Pdf}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href={Pdf} target="_blank" rel="noopener noreferrer">
             <div className="sidebar-item link">
               <ContactPageIcon />
               Resume
@@ -118,14 +127,17 @@ function App() {
               <img src={avatar} alt="" className="avatar" />
             </div>
             <div className="intro-bodytext">
-              I am an aspiring web developer. Skilled in primarily HTML, CSS,
-              JavaScript, and React. My educational background is a Bachelors
-              degree in History from the University of South Carolina. My
-              previous work experience is in Education and IT. My passion is
-              specifically in front-end web development using powerful
-              frameworks such as React. Open for a position as a junior
-              developer and willing to relocate in the United States. Please
-              feel free to reach out to me!
+              Aspiring Business Analyst. Experienced in repairing and
+              maintaining electronic devices, providing exceptional customer
+              service, full-stack development, troubleshooting, research, and
+              process optimization. Keen interpersonal, communication, and
+              organizational skills, as well a strong proficiency in technology,
+              computer science, and education. Bachelors degree in History with
+              a minor in Business Administration awarded from the University of
+              South Carolina. Core competencies include research and
+              troubleshooting expertise, process improvement, problem solving,
+              and analytical and technical skills. Self-learner with a strong
+              drive to continue expanding and developing skills.
             </div>
           </div>
         </div>
@@ -133,33 +145,33 @@ function App() {
           <div className="about" id="about">
             <div className="about-headtext">About Me</div>
             <div className="about-bodytext">
-              Since I was a child I have enjoyed creating things on the
-              internet. My interest in coding started by creating gamemodes for
-              the popular video game Roblox in Lua, continuing that as I grew
-              older in a game called Garry's Mod. Since then, I pursued a
+              Since I was a child I have enjoyed being apart of development productions.
+              My interest in developing started by creating gamemodes for
+              the popular video game Roblox in Lua, where I would work in a team environment
+              with friends in order to provide fun experiences. continuing this in a game called Garry's Mod following those same principles. Since then, I pursued a
               Bachelors degree in History with a minor in Business
               Administration at the University of South Carolina and enjoyed
-              computer-related activities on the side as a hobby.
+              development activities on the side as a hobby.
               <br />
               <br />
               After returning from teaching English overseas, I decided to take
-              my interest in web development and coding in general and attempt
+              my interest in the development process and attempt
               to turn it into a full-time passion. I started my journey though
               the Odin Project, and following that with other free learning
-              resources such as Scrimba and freeCodeCamp. Primarily focusing on
+              resources such as Scrimba, freeCodeCamp, and HarvardX. 
+              Primarily focusing on
               and learning HTML, CSS, and Javascript led me to discover React, a
               powerful Javascript library that I instantly enjoyed building
-              applications with. Below are a few examples of the technologies
-              that I have been learning with.
+              applications with.
               <br />
               <br />
               When I am not spending time at my computer, I enjoy lifting
               weights and playing sports such as volleyball and basketball.
               Recently, I have enjoyed hiking, traveling out west and seeing
               some of our great national parks, including the Grand Canyon and
-              Zion. My future goals are to obtain a position as a junior web
-              developer or junior software engineer to be able to pursue coding
-              and development as a career.
+              Zion. My future goals are to obtain a position as a Business Analyst
+              where I can use my soft skills effectively combined with my technical 
+              knowledge.
             </div>
             <div className="about-skills">
               <Tooltip
