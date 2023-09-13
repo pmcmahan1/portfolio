@@ -11,12 +11,7 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import ContactPageIcon from "@mui/icons-material/ContactPage";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import EmailIcon from "@mui/icons-material/Email";
-import {
-  FaHtml5,
-  FaCss3Alt,
-  FaReact,
-  FaGitSquare,
-} from "react-icons/fa";
+import { FaHtml5, FaCss3Alt, FaReact, FaGitSquare } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io5";
 import avatar from "./avatar.jpg";
 import preview from "./preview.jpg";
@@ -127,17 +122,17 @@ function App() {
               <img src={avatar} alt="" className="avatar" />
             </div>
             <div className="intro-bodytext">
-              Aspiring Business Analyst. Experienced in repairing and
-              maintaining electronic devices, providing exceptional customer
-              service, full-stack development, troubleshooting, research, and
-              process optimization. Keen interpersonal, communication, and
-              organizational skills, as well a strong proficiency in technology,
-              computer science, and education. Bachelors degree in History with
-              a minor in Business Administration awarded from the University of
-              South Carolina. Core competencies include research and
-              troubleshooting expertise, process improvement, problem solving,
-              and analytical and technical skills. Self-learner with a strong
-              drive to continue expanding and developing skills.
+              I have experience in repairing and maintaining electronic devices,
+              providing exceptional customer service, full-stack development,
+              troubleshooting, research, and process optimization. I possess
+              keen interpersonal, communication, and organizational skills, as
+              well as a strong proficiency in technology, computer science, and
+              education. I earned a Bachelor's degree in History with a minor in
+              Business Administration from the University of South Carolina. My
+              core competencies include expertise in research and
+              troubleshooting, process improvement, problem-solving, and
+              analytical and technical skills. I am a self-learner with a strong
+              drive to continue expanding and developing my skills
             </div>
           </div>
         </div>
@@ -145,33 +140,35 @@ function App() {
           <div className="about" id="about">
             <div className="about-headtext">About Me</div>
             <div className="about-bodytext">
-              Since I was a child I have enjoyed being apart of development productions.
-              My interest in developing started by creating gamemodes for
-              the popular video game Roblox in Lua, where I would work in a team environment
-              with friends in order to provide fun experiences. continuing this in a game called Garry's Mod following those same principles. Since then, I pursued a
-              Bachelors degree in History with a minor in Business
-              Administration at the University of South Carolina and enjoyed
-              development activities on the side as a hobby.
+              Since I was a child, I have enjoyed being a part of development
+              productions. My interest in development started when I began
+              creating game modes for the popular video game Roblox using Lua.
+              In this capacity, I collaborated with friends in a team
+              environment to provide fun experiences. I continued this passion
+              in a game called Garry's Mod, where I followed the same
+              principles. Subsequently, I pursued a Bachelor's degree in History
+              with a minor in Business Administration at the University of South
+              Carolina while also enjoying development activities as a hobby on
+              the side.
               <br />
               <br />
-              After returning from teaching English overseas, I decided to take
-              my interest in the development process and attempt
-              to turn it into a full-time passion. I started my journey though
-              the Odin Project, and following that with other free learning
-              resources such as Scrimba, freeCodeCamp, and HarvardX. 
-              Primarily focusing on
-              and learning HTML, CSS, and Javascript led me to discover React, a
-              powerful Javascript library that I instantly enjoyed building
-              applications with.
+              After returning from teaching English overseas, I decided to
+              transform my interest in the development process into a full-time
+              passion. I began my journey with The Odin Project and continued to
+              explore other free learning resources such as Scrimba,
+              freeCodeCamp, and HarvardX. My primary focus was on learning HTML,
+              CSS, and Javascript, which eventually led me to discover React, a
+              powerful JavaScript library that I instantly found enjoyable for
+              building applications.
               <br />
               <br />
-              When I am not spending time at my computer, I enjoy lifting
-              weights and playing sports such as volleyball and basketball.
-              Recently, I have enjoyed hiking, traveling out west and seeing
-              some of our great national parks, including the Grand Canyon and
-              Zion. My future goals are to obtain a position as a Business Analyst
-              where I can use my soft skills effectively combined with my technical 
-              knowledge.
+              When I'm not at my computer, I enjoy lifting weights and playing
+              sports such as volleyball and basketball. Recently, I've also
+              taken up hiking and traveling out west to explore some of our
+              great national parks, including the Grand Canyon and Zion. My
+              future goals include obtaining a position as a Business Analyst,
+              where I can effectively utilize my soft skills in combination with
+              my technical knowledge.
             </div>
             <div className="about-skills">
               <Tooltip
